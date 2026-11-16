@@ -1,6 +1,6 @@
 # Audit dimensions
 
-Twelve dimensions. For each: what senior work looks like, the gaps AI-built apps usually have, and how to check. Adapt to the stack; the questions transfer even when the tools differ.
+Eleven engineering areas. For each: what senior work looks like, the gaps AI-built apps usually have, and how to check. Adapt to the stack; the questions transfer even when the tools differ.
 
 Contents:
 1. Security and access control
@@ -12,9 +12,10 @@ Contents:
 7. Performance
 8. Operations and delivery
 9. Dependencies and configuration
-10. UX states and accessibility
-11. Docs and developer experience
-12. Product and scope judgement
+10. Docs and developer experience
+11. Product and scope judgement
+
+Loading, empty and error states, forms, accessibility and mobile layouts are covered in `design-ux.md`.
 Scoring anchors (at the end)
 
 ---
@@ -100,15 +101,7 @@ Scoring anchors (at the end)
 
 **How to check:** read the manifest; look for duplicates and unused packages; run the dependency audit; check for an env validation module.
 
-## 10. UX states and accessibility
-
-**Senior work:** every data view has loading, empty and error states. Forms validate inline, disable while submitting, prevent double-submit and preserve input on error. Destructive actions confirm. Keyboard navigation and focus are handled; labels, contrast and alt text meet WCAG AA. Works at phone width.
-
-**Common gaps:** happy path only (blank screen while loading, crash on empty); spinners forever on error; buttons that can be clicked twice; `div` with `onClick` instead of `button`; inputs without labels; placeholder-as-label; modals that trap or lose focus; layout breaks on mobile.
-
-**How to check:** read the main pages and forms for loading/empty/error handling. Grep for `onClick` on non-interactive elements, inputs without labels, images without alt. Run axe/Lighthouse if a dev server is available.
-
-## 11. Docs and developer experience
+## 10. Docs and developer experience
 
 **Senior work:** a README that gets a new engineer running in under 15 minutes: prerequisites, env setup (with an `.env.example`), commands, how to run tests, how to deploy. Architecture notes or ADRs for non-obvious decisions. Scripts for common tasks.
 
@@ -116,7 +109,7 @@ Scoring anchors (at the end)
 
 **How to check:** read the README and follow it mentally. Check `.env.example` against env vars used in code.
 
-## 12. Product and scope judgement
+## 11. Product and scope judgement
 
 Light touch: this is an engineering audit, but seniors do judge scope.
 

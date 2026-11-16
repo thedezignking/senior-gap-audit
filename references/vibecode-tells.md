@@ -31,6 +31,8 @@ The underlying pattern behind almost all of them: **code that was generated per 
 
 ## In the product
 
+The full list of design tells is in `design-ux.md` ("AI design tells"); these are the ones that also show up in an engineering review.
+
 - **Happy path only.** No loading, empty or error states; the app breaks on the first slow network or empty account.
 - **Template look.** Unmodified starter-kit UI, inconsistent spacing and type scale between pages, generic gradient-and-emoji landing copy.
 - **Dead ends.** Buttons that do nothing, settings that aren't saved, "coming soon" pages in the main navigation.
