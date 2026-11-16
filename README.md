@@ -37,7 +37,27 @@ It runs your project's own type check, linter, tests and dependency audit and re
 
 ## Install
 
-### Claude Code (all your projects)
+Install with the [Skills CLI](https://skills.sh/), which works with Claude Code and the other agents that support skills.
+
+### Everywhere (recommended)
+
+Installs globally, so the skill is available in every project:
+
+```bash
+npx skills add thedezignking/senior-gap-audit -g
+```
+
+### One project only
+
+Run from the project's root folder. The skill is added to that project and can be committed with it, so your team gets it too:
+
+```bash
+npx skills add thedezignking/senior-gap-audit
+```
+
+### Manual install (Claude Code)
+
+If you'd rather not use the CLI, clone the repository into your skills folder.
 
 macOS or Linux:
 
@@ -51,16 +71,6 @@ Windows (PowerShell):
 git clone https://github.com/thedezignking/senior-gap-audit.git "$env:USERPROFILE\.claude\skills\senior-gap-audit"
 ```
 
-Start a new Claude Code session and the skill is available.
-
-### Claude Code (one project only)
-
-From the project's root folder:
-
-```bash
-git clone https://github.com/thedezignking/senior-gap-audit.git .claude/skills/senior-gap-audit
-```
-
 ### Claude apps (web and desktop)
 
 Download this repository as a ZIP (green **Code** button → **Download ZIP**) and upload it as a custom skill in Claude's settings.
@@ -68,8 +78,10 @@ Download this repository as a ZIP (green **Code** button → **Download ZIP**) a
 ### Update
 
 ```bash
-git -C ~/.claude/skills/senior-gap-audit pull
+npx skills update
 ```
+
+Start a new session after installing or updating so the agent picks up the skill.
 
 ## Use
 
